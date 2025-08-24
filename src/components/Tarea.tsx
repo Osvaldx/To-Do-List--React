@@ -1,3 +1,6 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTrashCan } from '@fortawesome/free-solid-svg-icons'
+
 type Props = {
     tarea: string,
     borrarTarea: () => void
@@ -5,9 +8,10 @@ type Props = {
 
 export const Tarea = ({tarea, borrarTarea}: Props) => {
     return (
-        <div>
-            <span>{tarea}</span>
-            <button onClick={borrarTarea}>X</button>
+        <div className="task">
+            <input type="checkbox" name="" id="" />
+            <span className="task-name">{tarea}</span>
+            <button className="btn-taskDelete" onClick={borrarTarea}><FontAwesomeIcon icon={faTrashCan} size='xl'/></button>
         </div>
     )
 }
