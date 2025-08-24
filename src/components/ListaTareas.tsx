@@ -1,3 +1,5 @@
+import { Tarea } from "./Tarea"
+
 type Props = {
     listaTareas: string[]
     borrarTarea: (index: number) => void
@@ -6,9 +8,9 @@ type Props = {
 export const ListaTareas = ({listaTareas, borrarTarea}: Props) => {
     return (
         <div>
-            {listaTareas.map((tarea, index) => {
-                // elemento tarea
-            })}
+            {listaTareas.map((tarea, index) => (
+                <Tarea key={index} tarea={tarea} borrarTarea={() => borrarTarea(index)}></Tarea>
+            ))}
         </div>
     )
 }
