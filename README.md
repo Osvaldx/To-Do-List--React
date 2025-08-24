@@ -7,11 +7,13 @@ Permite agregar y eliminar tareas con una interfaz simple y responsiva.
 ## 👀 Capturas
 
 1.  **Pantalla sin tareas**
-   <img width="1807" height="945" alt="image" src="https://github.com/user-attachments/assets/4911277b-1aad-4603-aac0-803e51c0c972" />
+   <img width="824" height="616" alt="image" src="https://github.com/user-attachments/assets/be35f7e8-cf37-430c-9ed1-96c78e78a9c3" />
+
 
 
 3.  **Pantalla con tareas**
-   <img width="1807" height="945" alt="image" src="https://github.com/user-attachments/assets/507ef95d-b6e8-4f8a-bc55-36765db00e69" />
+   <img width="824" height="616" alt="image" src="https://github.com/user-attachments/assets/9801ee47-ec52-4e13-9cfa-a39f04afca5d" />
+
 
 ------------------------------------------------------------------------
 
@@ -66,5 +68,5 @@ npm run preview
 
 -   **react**, **react-dom**
 -   **typescript**
--   (Opcional) **@fortawesome/react-fontawesome**,
+-   **@fortawesome/react-fontawesome**,
     **@fortawesome/free-solid-svg-icons**
