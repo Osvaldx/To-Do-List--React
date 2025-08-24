@@ -17,18 +17,20 @@ export const TodoApp = () => {
     }
 
     return (
-        <div>
-            <h3>Lista de Tareas</h3>
-            <div>
-                <input
-                type="text"
-                value={nuevaTarea}
-                onChange={(e) => {setNuevaTarea(e.target.value)}}
-                placeholder="nueva tarea..."
-                />
-                <button onClick={handleAgregarTarea}>Agregar</button>
+        <div className="box-general">
+            <div className="card">
+            <h1 id="title">To Do List</h1>
+                <div className="box-interactive">
+                    <input
+                    type="text"
+                    value={nuevaTarea}
+                    onChange={(e) => {setNuevaTarea(e.target.value)}}
+                    placeholder="write your task..."
+                    />
+                    <button className="btn-add" onClick={handleAgregarTarea}>Add</button>
+                </div>
+                <ListaTareas listaTareas={listaTareas} borrarTarea={handleEliminarTarea}></ListaTareas>
             </div>
-            <ListaTareas listaTareas={listaTareas} borrarTarea={handleEliminarTarea}></ListaTareas>
         </div>
     )
 }
