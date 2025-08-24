@@ -13,7 +13,7 @@ export const TodoApp = () => {
     }
 
     const handleEliminarTarea = (index: number) => {
-        setListaTareas((tareas) => tareas.filter((_,i) => { i != index }))
+        setListaTareas(tareas => tareas.filter((_,i) => i != index ))
     }
 
     return (
