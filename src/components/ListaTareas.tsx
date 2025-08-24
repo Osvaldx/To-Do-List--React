@@ -7,7 +7,7 @@ type Props = {
 
 export const ListaTareas = ({listaTareas, borrarTarea}: Props) => {
     return (
-        <div>
+        <div className="task-list">
             {listaTareas.map((tarea, index) => (
                 <Tarea key={index} tarea={tarea} borrarTarea={() => borrarTarea(index)}></Tarea>
             ))}
