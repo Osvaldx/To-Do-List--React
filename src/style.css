@@ -26,7 +26,6 @@ body, html {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-
   max-height: min(70vh, 640px);
 }
 
@@ -61,6 +60,11 @@ body, html {
   color: #fff;
   font-size: 0.95rem;
   cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-add:active {
+    transform: scale(0.9);
 }
 
 .task-list {
@@ -88,4 +92,9 @@ body, html {
   border: none;
   background: #ff3d40;
   color: #fff;
+  transition: 0.1s;
+}
+
+.btn-taskDelete:active {
+    transform: scale(0.9);
 }
