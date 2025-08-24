@@ -11,7 +11,7 @@ body, html {
 
 .box-general {
   min-height: 100dvh;
-  background: linear-gradient(to bottom, #f4de91 50%, #3b82f7 50%);
+  background: linear-gradient(to bottom, #f8f8f8 0%, #91c7f4 30%, #3b82f7 100%);
   display: grid;
   place-items: center;
   padding: 2rem;
