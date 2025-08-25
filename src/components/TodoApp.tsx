@@ -3,12 +3,14 @@ import { ListaTareas } from "./ListaTareas";
 
 export const TodoApp = () => {
 
+    type typeTarea = { texto: string, completado: boolean }
+
     const [nuevaTarea, setNuevaTarea] = useState<string>("");
-    const [listaTareas, setListaTareas] = useState<string[]>([]);
+    const [listaTareas, setListaTareas] = useState<typeTarea[]>([]);
 
     const handleAgregarTarea = () => {
         if(nuevaTarea.trim() === "") return
-        setListaTareas((antiguasTareas) => [...antiguasTareas, nuevaTarea]);
+        setListaTareas(antiguasTareas => [...antiguasTareas, { texto: nuevaTarea, completado: false }]);
         setNuevaTarea("");
     }
 
@@ -16,6 +18,10 @@ export const TodoApp = () => {
         setListaTareas(tareas => tareas.filter((_,i) => i != index ))
     }
 
+    const handleTareaCompletada = (index: number) => {
+        setListaTareas(listaTareas.map((t,i) => i == index ? {...t, completado: !t.completado} : t))
+    }
+ 
     return (
         <div className="box-general">
             <div className="card">
@@ -29,7 +35,7 @@ export const TodoApp = () => {
                     />
                     <button className="btn-add" onClick={handleAgregarTarea}>Add</button>
                 </div>
-                <ListaTareas listaTareas={listaTareas} borrarTarea={handleEliminarTarea}></ListaTareas>
+                <ListaTareas listaTareas={listaTareas} borrarTarea={handleEliminarTarea} toggleCompletada={handleTareaCompletada}></ListaTareas>
             </div>
         </div>
     )
