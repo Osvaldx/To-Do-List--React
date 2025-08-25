@@ -85,6 +85,13 @@ body, html {
 
 .task-name { font-size: 1rem; }
 
+.task-completed {
+  font-size: 1rem;
+  text-decoration: line-through;
+  color: rgb(83, 83, 83);
+  font-style: italic;
+}
+
 .btn-taskDelete {
   padding: 5px;
   border-radius: 6px;
