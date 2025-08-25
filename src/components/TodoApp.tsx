@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { ListaTareas } from "./ListaTareas";
 
 export const TodoApp = () => {
@@ -6,7 +6,14 @@ export const TodoApp = () => {
     type typeTarea = { texto: string, completado: boolean }
 
     const [nuevaTarea, setNuevaTarea] = useState<string>("");
-    const [listaTareas, setListaTareas] = useState<typeTarea[]>([]);
+    const [listaTareas, setListaTareas] = useState<typeTarea[]>(() => {
+        const tareas = localStorage.getItem("tareas");
+        return tareas ? JSON.parse(tareas) : []
+    });
+
+    useEffect(() => {
+        localStorage.setItem("tareas", JSON.stringify(listaTareas));
+    }, [listaTareas]);
 
     const handleAgregarTarea = () => {
         if(nuevaTarea.trim() === "") return
