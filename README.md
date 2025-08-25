@@ -7,12 +7,14 @@ Permite agregar y eliminar tareas con una interfaz simple y responsiva.
 ## 👀 Capturas
 
 1.  **Pantalla sin tareas**
-   <img width="824" height="616" alt="image" src="https://github.com/user-attachments/assets/be35f7e8-cf37-430c-9ed1-96c78e78a9c3" />
+   <img width="885" height="589" alt="image" src="https://github.com/user-attachments/assets/ef97e2bc-0969-49ee-8c53-abfde49c0b76" />
+
 
 
 
 3.  **Pantalla con tareas**
-   <img width="824" height="616" alt="image" src="https://github.com/user-attachments/assets/9801ee47-ec52-4e13-9cfa-a39f04afca5d" />
+   <img width="885" height="589" alt="image" src="https://github.com/user-attachments/assets/c133e6a6-5224-4c87-b880-4eeea6347632" />
+
 
 
 ------------------------------------------------------------------------
